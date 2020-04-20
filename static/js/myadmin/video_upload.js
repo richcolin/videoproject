@@ -43,16 +43,16 @@ $("#chunked_upload").fileupload({
     var type = data.originalFiles[0]['type'];
     console.log('file size --> ' + fileSize);
     console.log('type --> ' + type);
-
-    if(fileSize > 100000000){
-        alert('文件太大了，请上传100M以内的文件');
+    console.log('100000000000')
+    if(fileSize > 100000000000){
+        alert('文件太大了，请上传1G以内的文件');
         return;
     }
 
-    if(!type.startsWith("video/")){
-        alert('视频格式不正确');
-        return;
-    }
+    //if(!type.startsWith("video/")){
+        //alert('视频格式不正确');
+        //return;
+    //}
 
     // If this is the second file you're uploading we need to remove the
     // old upload_id and just keep the csrftoken (which is always first).
